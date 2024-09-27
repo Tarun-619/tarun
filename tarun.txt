@@ -20,23 +20,28 @@ int removeDuplicates(int* nums, int numsSize) {
 }
 
 
+
 2) Subarray sum equals k
 
-#include<stdio.h>
+#include <stdio.h>
 
 int subarraySum(int* nums, int numsSize, int k) {
-    if (numsSize==0)
-    return 0;
+int count = 0;
 
-    int cn=1;
-    int sum=0;
+    
+    for (int start = 0; start < numsSize; start++) {
+        int sum = 0;
 
-    for(int i=0;i<numsSize;i++)
-    {
-            if (sum==k);
-             cn++;
-             sum += nums[i];
-           
+        
+        for (int end = start; end < numsSize; end++) {
+            sum += nums[end]; 
+            
+            
+            if (sum == k) {
+                count++; 
+            }
+        }
     }
- return sum;
-}
+
+    return count;}
+
