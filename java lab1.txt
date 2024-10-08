@@ -1,0 +1,82 @@
+1.
+class Box {
+    double height;
+    double width;
+    double depth;
+}
+
+class BoxDemo {
+    public static void main(String[] args) {
+        Box mybox = new Box();
+        double vol;
+
+        mybox.width = 10;
+        mybox.height = 20;
+        mybox.depth = 15;
+
+        vol = mybox.width * mybox.height * mybox.depth;
+
+        System.out.println("Volume is: " + vol);
+    }
+}
+
+
+
+2.
+class typecast{
+   public static void main(String[] args){
+    int x=2;
+    System.out.println("int is:"+x);
+    float y=x;
+    System.out.println("float is:"+y);
+   }
+}
+
+
+
+3.
+class Box{
+  double length;
+  double breadth;
+  double width;
+
+  Box(double length,double breadth,double width){
+   this.width= width;
+   this.breadth= breadth;
+   this.length= length;
+ }
+}
+
+class boxes{
+  public static void main(String[] args){
+    Box box1= new Box(15,20,10);
+
+    double volume=box1.length*box1.breadth*box1.width;
+    System.out.println("volume is"+volume);
+  }
+}
+
+
+4.
+class Box1 {
+    public static void main(String[] args) {
+        
+    }
+    int height;
+    int width;
+    int depth;
+
+    Box1(int height, int width, int depth) {
+        this.height = height;
+        this.width = width;
+        this.depth = depth;
+    }
+
+    void setNewWidth(int width) {
+        this.width = width;
+    }
+
+    int vol() {
+        return height * width * depth;
+    }
+}
