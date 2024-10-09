@@ -59,24 +59,36 @@ class boxes{
 
 4.
 class Box1 {
-    public static void main(String[] args) {
-        
-    }
-    int height;
-    int width;
-    int depth;
+   public static void main(String[] args) {
+       Box1 mybox= new Box1(10,20,15);
+       System.out.println("initial volume is"+mybox.vol());
 
-    Box1(int height, int width, int depth) {
-        this.height = height;
-        this.width = width;
-        this.depth = depth;
-    }
 
-    void setNewWidth(int width) {
-        this.width = width;
-    }
+       mybox.setNewWidth(25);
 
-    int vol() {
-        return height * width * depth;
-    }
+
+       System.out.println("final volume is"+mybox.vol());
+      
+   }
+   int height;
+   int width;
+   int depth;
+
+
+   Box1(int height, int width, int depth) {
+       this.height = height;
+       this.width = width;
+       this.depth = depth;
+   }
+
+
+   void setNewWidth(int width) {
+       this.width = width;
+   }
+
+
+   int vol() {
+       return height * width * depth;
+   }
 }
+
